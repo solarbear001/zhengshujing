@@ -90,11 +90,21 @@
     text-transform: uppercase;
     letter-spacing: -0.02em;
   }
+  .text-display-xl {
+    font-size: 200px;
+    line-height: 1;
+    font-family: Georgia, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', '黑体', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+  }
 }
 
 @media (max-width: 768px) {
   .text-display {
     font-size: 48px;
+  }
+  .text-display-xl {
+    font-size: 64px;
   }
 }
 
