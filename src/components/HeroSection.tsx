@@ -6,7 +6,7 @@ const HeroSection = () => {
       {/* Central image with text overlay */}
       <div className="relative w-[480px] max-w-[90vw] aspect-square">
         <img
-          src="https://cdn.sanity.io/images/hvd5n54p/production/a40ad54ca387cb903eaec29f93def4e2055bc566-6800x5100.jpg?w=1200&fm=webp"
+          src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWFmamNmZHhxYXRmdzI5M3l1aDFuajVjdnFqdnY4Z3Y5MjNnc3RyOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eCHMPctpUGtlvzsvyW/giphy.gif"
           alt="Editorial portrait"
           className="w-full h-full object-cover grayscale"
         />
