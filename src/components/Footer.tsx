@@ -16,22 +16,18 @@ const Footer = () => {
 
         {/* Center - Contact */}
         <div className="text-center space-y-2">
-          <p className="font-serif text-sm tracking-[0.15em] text-foreground uppercase">
-            Reach Out
-          </p>
+          <p className="font-serif text-sm tracking-[0.15em] text-foreground uppercase">Reach Out</p>
           <a
-            href="mailto:hello@shujingzheng.com"
+            href="mailto:shujing.cheng01@gmail.com"
             className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors duration-300"
           >
-            hello@shujingzheng.com
+            shujing.cheng01@gmail.com
           </a>
         </div>
 
         {/* Right */}
         <div>
-          <span className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase">
-            Hattifattener
-          </span>
+          <span className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase">Hattifattener</span>
         </div>
       </div>
     </footer>
