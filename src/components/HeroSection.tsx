@@ -5,17 +5,19 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6">
       {/* Central image with text overlay */}
       <div className="relative w-[480px] max-w-[90vw] aspect-square">
-        <img src={heroImage} alt="Editorial portrait" className="w-full h-full object-cover grayscale" />
+        <img
+          src="https://www.bellingcat.com/app/uploads/2026/03/Screenshot-2026-03-04-at-14.37.14-300x180.jpg"
+          alt="Editorial portrait"
+          className="w-full h-full object-cover grayscale"
+        />
 
         {/* Text overlay */}
         <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-10">
           {/* Top text */}
           <div className="space-y-1">
             <div className="flex justify-between items-center">
-              <span className="font-mono text-[10px] tracking-[0.3em] text-foreground/30 uppercase">
-                ▓▒░ SYS.INIT ░▒▓
-              </span>
-              <span className="font-mono text-[10px] tracking-[0.2em] text-foreground/30">██░░ 2025</span>
+              <span className="font-mono text-[10px] tracking-[0.3em] text-foreground/30 uppercase">SYS.INIT</span>
+              <span className="font-mono text-[10px] tracking-[0.2em] text-foreground/30"> 2025</span>
             </div>
             <p className="font-mono text-xs tracking-[0.4em] text-foreground uppercase text-justify leading-relaxed">
               writer&nbsp;&nbsp;editor&nbsp;&nbsp;researcher&nbsp;&nbsp;OSINTer
@@ -35,8 +37,8 @@ const HeroSection = () => {
           {/* Bottom text */}
           <div className="space-y-1">
             <div className="flex justify-between items-center">
-              <span className="font-mono text-[10px] tracking-[0.2em] text-foreground/30">░▒▓█</span>
-              <span className="font-mono text-[10px] tracking-[0.2em] text-foreground/30">▓▒░░██</span>
+              <span className="font-mono text-[10px] tracking-[0.2em] text-foreground/30"></span>
+              <span className="font-mono text-[10px] tracking-[0.2em] text-foreground/30"></span>
             </div>
             <p className="font-mono text-xs tracking-[0.4em] text-foreground uppercase text-right">Based in Shanghai</p>
           </div>
