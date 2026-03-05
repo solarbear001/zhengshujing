@@ -93,6 +93,16 @@
     text-transform: uppercase;
     letter-spacing: -0.02em;
   }
+  .text-display-bottom {
+    font-family:
+      Avenir Light,
+      "Noto Sans SC",
+      "PingFang SC",
+      "Microsoft YaHei",
+      "黑体",
+      sans-serif;
+    text-transform: uppercase;
+  }
   .text-display-xl {
     font-size: 200px;
     line-height: 1;
