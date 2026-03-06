@@ -5,7 +5,7 @@ const Footer = () => {
         {/* Left - LinkedIn */}
         <div>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/shujing-zheng-19ba991b3/?locale=en_US"
             target="_blank"
             rel="noopener noreferrer"
             className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground hover:text-foreground transition-colors duration-300 uppercase"
