@@ -16,8 +16,8 @@ const HeroSection = () => {
           {/* Top text */}
           <div className="space-y-1">
             <div className="flex justify-between items-center">
-              <span className="font-mono text-[10px] tracking-[0.3em] text-foreground/30 uppercase">SYS.INIT</span>
-              <span className="font-mono text-[10px] tracking-[0.2em] text-foreground/30"> 2025</span>
+              <span className="font-mono text-[10px] tracking-[0.3em] text-foreground/30 uppercase">ZSJ.INT</span>
+              <span className="font-mono text-[10px] tracking-[0.2em] text-foreground/30"> 2026</span>
             </div>
             <p className="font-mono text-xs tracking-[0.4em] text-foreground uppercase text-justify leading-relaxed">
               writer&nbsp;&nbsp;editor&nbsp;&nbsp;researcher&nbsp;&nbsp;OSINTer
@@ -26,6 +26,7 @@ const HeroSection = () => {
 
           {/* Center keyword */}
           <div className="space-y-2 text-center">
+            <p className="font-georgia text-lg md:text-xl tracking-[0.15em] text-foreground uppercase">Osint Curious</p>
             <p className="font-georgia text-lg md:text-xl tracking-[0.15em] text-foreground uppercase">
               Visual Investigation
             </p>

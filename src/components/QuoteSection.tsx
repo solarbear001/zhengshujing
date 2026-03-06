@@ -5,6 +5,8 @@ const QuoteSection = () => {
         <blockquote className="space-y-4">
           <p className="text-display-xl tracking-tight text-foreground">Better Information</p>
           <p className="text-display-xl tracking-tight text-foreground">Better</p>
+          <p className="text-display-xl tracking-tight text-foreground">Brain</p>
+          <p className="text-display-xl tracking-tight text-foreground">Better</p>
           <p className="text-display-xl tracking-tight text-foreground">Life</p>
         </blockquote>
       </div>
