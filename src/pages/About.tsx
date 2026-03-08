@@ -116,7 +116,7 @@ const About = () => {
 
             {/* Small text — centered */}
             <div className="text-center py-8 md:py-12">
-              <p className="font-sans text-sm md:text-base tracking-wide text-muted-foreground leading-[2]">
+              <p className="font-sans text-sm md:text-base tracking-wide text-muted-foreground leading-[2] max-w-xl mx-auto">
                 {t(
                   "Heavy user of artificial intelligence, agents lover,  great interest in AIGC detection and enhancement.",
                   "人工智能重度使用者，智能助手爱好者，对AIGC检测与增强抱有浓厚兴趣。",
@@ -162,7 +162,13 @@ const About = () => {
                 </p>
                 <p>
                   {t(
-                    "— exploring how information shapes understanding and how design communicates truth.",
+                    "— Strong multimedia skills in data collection and analysis. Proven ability to monitor social media accounts, verify information and write news reports. ",
+                    "她对数字体验、品牌塑造、创意策略和视觉识别感兴趣——探索信息如何塑造理解，设计如何传达真相。",
+                  )}
+                </p>
+                <p>
+                  {t(
+                    "— - Strong understanding of media landscape and news production. Delivered media literacy lectures at multiple universities including ZJU and SISU. ",
                     "她对数字体验、品牌塑造、创意策略和视觉识别感兴趣——探索信息如何塑造理解，设计如何传达真相。",
                   )}
                 </p>
