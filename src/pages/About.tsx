@@ -46,7 +46,7 @@ const About = () => {
             </div>
           </div>
         </section>
-        export default QuoteSection;
+
         {/* 2 — Information Section — left-aligned */}
         <section className="px-6 md:px-20 py-32">
           <div className="max-w-6xl mx-auto grid grid-cols-12 gap-8">
