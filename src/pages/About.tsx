@@ -147,7 +147,7 @@ const About = () => {
               <div className="space-y-4 font-sans text-sm md:text-base text-muted-foreground leading-[1.8] tracking-wide">
                 <p>
                   {t(
-                    "Fact checker, senior journalist/editor at the World News Section of The Paper (澎湃新闻), specializing in combating online misinformation and disinformation with digital tools and advanced technologies. Well-experienced in social research, data analysis, AIGC exploration and media practice, and take great interest in job opportunities related to digital technology, data driven content production, AIGC, media operation or international communication.",
+                    "Shujing Zheng is a senior journalist/editor,fact checker at the World News Section of The Paper (澎湃新闻), specializing in combating online misinformation and disinformation with digital tools and advanced technologies. Well-experienced in social research, data analysis, AIGC exploration and media practice, and take great interest in job opportunities related to digital technology, data driven content production, AIGC, media operation or international communication.",
                     "郑淑婧是一名编辑和开源情报研究员，拥有国际传播和视觉叙事背景。她的工作位于调查新闻、数字媒体和创意策略的交汇处。",
                   )}
                 </p>
@@ -177,18 +177,13 @@ const About = () => {
                   <div className="space-y-3">
                     <span className="text-display text-foreground/10 leading-none block">S</span>
                     <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase">
-                      {t("Services", "技能")}
+                      {t("Skills", "技能")}
                     </p>
                   </div>
 
-                  <h3 className="font-serif text-2xl md:text-3xl text-foreground tracking-tight lowercase">
-                    {t("skills", "技能")}
-                  </h3>
-
                   <ul className="space-y-5">
                     {[
-                      { en: "Visual Investigation", zh: "视觉调查" },
-                      { en: "Open Source Intelligence (OSINT)", zh: "开源情报" },
+                      { en: "OSINT Investigation", zh: "开源情报调查" },
                       { en: "International Communication", zh: "国际传播" },
                       { en: "Video Editing & Production", zh: "视频剪辑与制作" },
                       { en: "Hosting / Event / Interview / Writing", zh: "主持 / 会务 / 采访 / 写作" },
@@ -222,10 +217,6 @@ const About = () => {
                     </p>
                   </div>
 
-                  <h3 className="font-serif text-2xl md:text-3xl text-foreground tracking-tight lowercase">
-                    {t("accomplishments", "成就")}
-                  </h3>
-
                   <ul className="space-y-5">
                     {[
                       { en: "Shanghai Journalism Award ×10", zh: "上海新闻奖 ×10" },
@@ -250,13 +241,9 @@ const About = () => {
                   <div className="space-y-3">
                     <span className="text-display text-foreground/10 leading-none block">P</span>
                     <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase">
-                      {t("Press", "媒体")}
+                      {t("Events", "项目")}
                     </p>
                   </div>
-
-                  <h3 className="font-serif text-2xl md:text-3xl text-foreground tracking-tight lowercase">
-                    {t("interviews / events", "采访 / 活动")}
-                  </h3>
 
                   <ul className="space-y-5">
                     {[
