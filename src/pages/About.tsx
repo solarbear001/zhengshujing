@@ -47,7 +47,7 @@ const About = () => {
         <section className="relative min-h-screen flex flex-col items-center justify-center px-6">
           <div className="relative w-[480px] max-w-[90vw] aspect-square">
             <img
-              src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWFmamNmZHhxYXRmdzI5M3l1aDFuajVjdnFqdnY4Z3Y5MjNnc3RyOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eCHMPctpUGtlvzsvyW/giphy.gif"
+              src="https://inews.gtimg.com/om_bt/OkRbt3HlugGC3ly0hmskk3aqPR81NfCvNS0CaSpOZ04hsAA/0"
               alt="Shujing Zheng"
               className="w-full h-full object-cover grayscale"
             />
