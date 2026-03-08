@@ -147,7 +147,7 @@ const About = () => {
               <div className="space-y-4 font-sans text-sm md:text-base text-muted-foreground leading-[1.8] tracking-wide">
                 <p>
                   {t(
-                    "Shujing Zheng is an editor and open-source intelligence researcher with a background in international communication and visual storytelling. Her work sits at the intersection of investigative journalism, digital media, and creative strategy.",
+                    "Fact checker, senior journalist/editor at the World News Section of The Paper (澎湃新闻), specializing in combating online misinformation and disinformation with digital tools and advanced technologies. Well-experienced in social research, data analysis, AIGC exploration and media practice, and take great interest in job opportunities related to digital technology, data driven content production, AIGC, media operation or international communication.",
                     "郑淑婧是一名编辑和开源情报研究员，拥有国际传播和视觉叙事背景。她的工作位于调查新闻、数字媒体和创意策略的交汇处。",
                   )}
                 </p>
@@ -173,10 +173,7 @@ const About = () => {
             <div className="col-span-12 md:col-span-6 space-y-0">
               {/* Skills Section */}
               <div ref={skillsRef} className="min-h-screen sticky top-0 flex items-start pt-32 pb-16 z-30">
-                <motion.div
-                  style={{ y: skillsY, opacity: skillsOpacity }}
-                  className="w-full space-y-10"
-                >
+                <motion.div style={{ y: skillsY, opacity: skillsOpacity }} className="w-full space-y-10">
                   <div className="space-y-3">
                     <span className="text-display text-foreground/10 leading-none block">S</span>
                     <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase">
@@ -213,11 +210,11 @@ const About = () => {
               </div>
 
               {/* Awards Section */}
-              <div ref={awardsRef} className="min-h-screen sticky top-0 flex items-start pt-32 pb-16 z-20 bg-background">
-                <motion.div
-                  style={{ y: awardsY, opacity: awardsOpacity }}
-                  className="w-full space-y-10"
-                >
+              <div
+                ref={awardsRef}
+                className="min-h-screen sticky top-0 flex items-start pt-32 pb-16 z-20 bg-background"
+              >
+                <motion.div style={{ y: awardsY, opacity: awardsOpacity }} className="w-full space-y-10">
                   <div className="space-y-3">
                     <span className="text-display text-foreground/10 leading-none block">A</span>
                     <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase">
@@ -249,10 +246,7 @@ const About = () => {
 
               {/* Press / Events Section */}
               <div ref={pressRef} className="min-h-screen sticky top-0 flex items-start pt-32 pb-16 z-10 bg-background">
-                <motion.div
-                  style={{ y: pressY, opacity: pressOpacity }}
-                  className="w-full space-y-10"
-                >
+                <motion.div style={{ y: pressY, opacity: pressOpacity }} className="w-full space-y-10">
                   <div className="space-y-3">
                     <span className="text-display text-foreground/10 leading-none block">P</span>
                     <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase">
