@@ -14,10 +14,11 @@ const Work = () => {
         {/* Hero */}
         <section className="min-h-[70vh] flex flex-col items-center justify-center px-6 md:px-20 pt-32 pb-16">
           <div className="max-w-4xl w-full text-center space-y-6">
-            <h1 className="text-display tracking-tight text-foreground">
-              w rk
-            </h1>
-            <p className="text-display tracking-tight text-foreground/40" style={{ fontSize: "clamp(28px, 4vw, 60px)" }}>
+            <h1 className="text-display tracking-tight text-foreground">w rk</h1>
+            <p
+              className="text-display tracking-tight text-foreground/40"
+              style={{ fontSize: "clamp(28px, 4vw, 60px)" }}
+            >
               ( a selection ) 2026
             </p>
             <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground uppercase mt-8">
@@ -39,9 +40,7 @@ const Work = () => {
                   {isEven ? (
                     <>
                       <div className="col-span-12 md:col-span-2">
-                        <span className="text-display text-foreground/10 leading-none block">
-                          {project.letter}
-                        </span>
+                        <span className="text-display text-foreground/10 leading-none block">{project.letter}</span>
                         <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase mt-2">
                           {project.category}
                         </p>
@@ -52,7 +51,7 @@ const Work = () => {
                           {t("READ →", "阅读 →")}
                         </Link>
                       </div>
-                      <div className="col-span-12 md:col-span-4 md:col-start-4">
+                      <div className="col-span-12 md:col-span-4 md:col-start-4 grayscale">
                         <Link to={`/work/${project.slug}`}>
                           <div className="aspect-[4/3] overflow-hidden">
                             <img
@@ -108,9 +107,7 @@ const Work = () => {
                         </Link>
                       </div>
                       <div className="col-span-12 md:col-span-2 md:col-start-11 md:text-right">
-                        <span className="text-display text-foreground/10 leading-none block">
-                          {project.letter}
-                        </span>
+                        <span className="text-display text-foreground/10 leading-none block">{project.letter}</span>
                         <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase mt-2">
                           {project.category}
                         </p>
