@@ -247,7 +247,7 @@ export const blogArticles: Article[] = [
     type: "blog",
     letter: "O",
     category: "AIGC",
-    titleEn: "The Architecture of Open-Source Intelligence",
+    titleEn: "Understanding the Capabilities and Limitations of AIGC Detection Tools",
     titleZh: "一文读懂AIGC检测器的能力和局限",
     descEn: "Why these detectors are not trustworthy？",
     descZh: "为什么这些检测器不可信？",
