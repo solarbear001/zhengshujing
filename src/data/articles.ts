@@ -409,7 +409,8 @@ export const blogArticles: Article[] = [
     descZh: "如何利用实时卫星图像进行开源调查与核实。",
     dateEn: "October 5, 2024",
     dateZh: "2024年10月5日",
-    image: blogCoverDefault,
+    image:
+      "https://cdn.sanity.io/images/hvd5n54p/production/e30c2db4665b74dd29b2f45e97b2ebb46588a7bf-1920x1440.jpg?w=1200&fm=webp",
     externalLink: "https://m.thepaper.cn/newsDetail_forward_28876586",
     contentEn: [],
     contentZh: [],
