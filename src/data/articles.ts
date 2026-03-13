@@ -345,7 +345,8 @@ export const blogArticles: Article[] = [
     descZh: "测试AI模型辨别真实视频与AI生成视频的能力。",
     dateEn: "November 20, 2025",
     dateZh: "2025年11月20日",
-    image: blogCoverDefault,
+    image:
+      "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/final_keyword_header.width-1600.format-webp.webp",
     externalLink: "https://m.thepaper.cn/newsDetail_forward_31983671",
     contentEn: [],
     contentZh: [],
@@ -378,7 +379,8 @@ export const blogArticles: Article[] = [
     descZh: "比较四大主流AI模型辅助事实核查工作的能力。",
     dateEn: "November 18, 2025",
     dateZh: "2025年11月18日",
-    image: blogCoverDefault,
+    image:
+      "https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=cover,w=1200,h=635,q=80/sites/www.builtin.com/files/2023-02/chatgtp-artificial-intelligence-what-is-chatgpt_0.png",
     externalLink: "https://m.thepaper.cn/newsDetail_forward_31966879",
     contentEn: [],
     contentZh: [],
@@ -427,7 +429,8 @@ export const blogArticles: Article[] = [
     descZh: "利用档案工具和技术记录在冲突中被摧毁的建筑。",
     dateEn: "October 4, 2024",
     dateZh: "2024年10月4日",
-    image: blogCoverDefault,
+    image:
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3m2OOMA2TzPVxDImfS8TBwDPGfmuE5rVAqnYpOBOIEcTyCZYoa9rDPTnA09tMQo65aJTUYYV8gcNMrRoho8nzTaAbK9wZWBroP911Y-W_p8M6YwKfwG0Ub5ik4rRmCt7jiSNX/s400/historical_imagery_googleplex_1948.JPG",
     externalLink: "https://m.thepaper.cn/newsDetail_forward_28876571",
     contentEn: [],
     contentZh: [],
