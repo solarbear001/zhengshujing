@@ -393,7 +393,7 @@ export const blogArticles: Article[] = [
     descZh: "调查以伊冲突中AI生成图像的泛滥。",
     dateEn: "July 1, 2025",
     dateZh: "2025年7月1日",
-    image: blogCoverDefault,
+    image: "https://pbs.twimg.com/media/GtW71t5XMAA4pxz?format=jpg&name=medium",
     externalLink: "https://m.thepaper.cn/newsDetail_forward_31067780",
     contentEn: [],
     contentZh: [],
