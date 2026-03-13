@@ -291,7 +291,7 @@ export const blogArticles: Article[] = [
     letter: "A",
     category: "AIGC Lab",
     titleEn: "Lab | 'AI Fact-Checkers' Online: Which of Four Models Is Most Reliable?",
-    titleZh: "明查·实验室｜"AI核查员"上线，四大模型谁最靠谱？",
+    titleZh: "明查·实验室｜\u201CAI核查员\u201D上线，四大模型谁最靠谱？",
     descEn: "Comparing four mainstream AI models in their ability to assist fact-checking work.",
     descZh: "比较四大主流AI模型辅助事实核查工作的能力。",
     dateEn: "November 18, 2025",
