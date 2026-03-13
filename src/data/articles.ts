@@ -474,7 +474,7 @@ export const blogArticles: Article[] = [
     descZh: "事实核查从业者对ChatGPT的风险与潜力的看法。",
     dateEn: "February 15, 2023",
     dateZh: "2023年2月15日",
-    image: "https://imagecloud.thepaper.cn/thepaper/image/238/408/469.png",
+    image: "https://pbs.twimg.com/media/Fn1ELNoXEAMjFBc?format=jpg&name=medium",
     externalLink: "https://m.thepaper.cn/newsDetail_forward_21921265",
     contentEn: [],
     contentZh: [],
