@@ -430,3 +430,8 @@ import blogInline3 from "@/assets/blog-inline-3.jpg";
 import blogInline4 from "@/assets/blog-inline-4.jpg";
 
 export const inlineImages = [blogInline1, blogInline2, blogInline3, blogInline4];
+
+// Helper to find article by slug
+export const getArticleBySlug = (slug: string): Article | undefined => {
+  return [...workArticles, ...blogArticles].find((a) => a.slug === slug);
+};
