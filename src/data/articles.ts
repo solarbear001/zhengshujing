@@ -275,7 +275,7 @@ export const blogArticles: Article[] = [
     letter: "S",
     category: "AIGC Lab",
     titleEn: "Lab | This 'Six-Fingered Boy' — Do LLMs Know It's AI-Made?",
-    titleZh: "明查·实验室｜这个"六指小男孩"，大模型知道TA是AI造的吗？",
+    titleZh: "明查·实验室｜这个\u201C六指小男孩\u201D，大模型知道TA是AI造的吗？",
     descEn: "Testing whether large language models can identify AI-generated images with visible artifacts.",
     descZh: "测试大语言模型能否识别带有可见瑕疵的AI生成图像。",
     dateEn: "November 19, 2025",
