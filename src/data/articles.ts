@@ -4,6 +4,8 @@ import work3 from "@/assets/work-3.jpg";
 import work4 from "@/assets/work-4.jpg";
 import work5 from "@/assets/work-5.jpg";
 import blogCoverDefault from "@/assets/blog-cover-default.png";
+import blogFeaturedInline1 from "@/assets/blog-featured-inline-1.jpg";
+import blogFeaturedInline2 from "@/assets/blog-featured-inline-2.jpg";
 
 export interface Article {
   slug: string;
