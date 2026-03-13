@@ -3,6 +3,16 @@ import work2 from "@/assets/work-2.jpg";
 import work3 from "@/assets/work-3.jpg";
 import work4 from "@/assets/work-4.jpg";
 import work5 from "@/assets/work-5.jpg";
+import blogExt1 from "@/assets/blog-ext-1.jpg";
+import blogExt2 from "@/assets/blog-ext-2.jpg";
+import blogExt3 from "@/assets/blog-ext-3.jpg";
+import blogExt4 from "@/assets/blog-ext-4.jpg";
+import blogExt5 from "@/assets/blog-ext-5.jpg";
+import blogExt6 from "@/assets/blog-ext-6.jpg";
+import blogExt7 from "@/assets/blog-ext-7.jpg";
+import blogExt8 from "@/assets/blog-ext-8.jpg";
+import blogExt9 from "@/assets/blog-ext-9.jpg";
+import blogExt10 from "@/assets/blog-ext-10.jpg";
 
 export interface Article {
   slug: string;
@@ -239,181 +249,169 @@ export const workArticles: Article[] = [
 ];
 
 // ============================================================
-// 🔧 BLOG POSTS — Edit titles, descriptions, and content below
+// 🔧 BLOG POSTS — External links to thepaper.cn articles
+// Sorted by publish date (newest first)
 // ============================================================
 export const blogArticles: Article[] = [
   {
-    slug: "architecture-of-osint",
+    slug: "gemini-vs-chatgpt-video",
     type: "blog",
-    letter: "O",
-    category: "AIGC",
-    titleEn: "Understanding the Capabilities and Limitations of AIGC Detection Tools",
-    titleZh: "一文读懂AIGC检测器的能力和局限",
-    descEn: "Why these detectors are not trustworthy？",
-    descZh: "为什么这些检测器不可信？",
-    dateEn: "March 2026",
-    dateZh: "2026年3月",
-    image: "https://hivemoderation.com/images/c88713d.png",
-    contentEn: [
-      "Open-source intelligence has undergone a remarkable transformation in the past decade. What began as a niche practice among security analysts and hobbyist investigators has evolved into one of the most powerful tools in modern journalism's arsenal.",
-      "The proliferation of publicly available satellite imagery, social media data, corporate registries, and government databases has created an unprecedented landscape for investigative work. Tools like Google Earth, Sentinel Hub, and various social media analysis platforms have democratized access to information that was once the exclusive domain of intelligence agencies.",
-      "Yet this democratization brings its own challenges. The sheer volume of available data creates noise that can overwhelm even experienced analysts. The key skill is no longer access to information — it's the ability to filter, cross-reference, and verify across multiple sources.",
-      "The methodology of OSINT investigation follows a structured approach: identify the question, map available data sources, collect and preserve evidence, analyze patterns, and verify findings through independent corroboration. Each step requires both technical proficiency and critical thinking.",
-      "As we look ahead, the integration of AI tools into OSINT workflows promises to accelerate analysis while raising important questions about automation bias and the role of human judgment in investigative work.",
-    ],
-    contentZh: [
-      "《纽约时报》在2月底发布了一篇AI测试文章，对市面上10多款主流的AI检测工具识别AI生成图像和音视频的能力进行了测试。文章指出，尽管AI进步神速，但目前你还不能指望依靠AI检测工具来判断图像的真伪。",
-      "这一结论与我们去年年底的观察基本一致：尽管学术界提出了许多检测方法，也不断有新论文发表，但在现实应用中，没有任何一款工具是完美的。",
-      "一些工具的检测结果相对准确，并具备对多模态内容（图像、视频、音频）的识别能力，例如Gemini Pro和AI or Not。Sensity和Hive Detect的表现也算得上差强人意。但一些主流商业大模型，例如Claude和ChatGPT，在判断图像真伪方面的表现反而未达预期。",
-      "这其中最令人费解的是Claude的表现——考虑到这是一款如此强调伦理的模型。但创造它的人好像完全没有考虑要让模型分辨得清真假这件事。我知道这款模型在代码方面的能力表现出色，但AI的表现再次证明，模型的能力有不同的维度。在为数不多的8类真假图片测试中，Claude仅通过了“真实拍摄的图片（非AI生成）”这一项，其余的内容，不是判断错误，就表示无法检测。",
-      "Claude在1月更新了它的constitution，强调要保持诚实并造福用户。我好奇，他们是否会将AI的核假能力作为指标纳入“诚实”的范畴。",
-      "Gemini的表现要比Claude强得多。眼下一个更值得思考的问题是：为什么同样是AI模型，有些工具在识别AI生成内容方面的表现明显优于另一些？",
-      "要回答这个问题，需要先理解这些AI检测工具是如何工作的。",
-      "目前，大多数AI检测工具采用的是空域分析结合频域分析（frequency domain analysis）的技术路径。其核心思路是：真实图像与AI生成图像在频谱结构上存在差异。通过提取这些频谱特征，并训练一个二分类模型，就可以对图像进行真假判断。",
-      "不同工具之间的性能差异，主要来自三个方面。",
-      "首先是训练时使用的生成模型不同。有些检测工具基于GAN生成图像训练，有些基于Diffusion模型，还有些基于VAE模型。不同生成模型产生的图像特征不同，因此检测器学习到的判别特征也会不同。",
-      "其次是机器学习过程中挖掘的图像的的特征类型不同。有些模型只依赖视觉特征，譬如噪点、伪影、边界混合、全局纹理一致性等。有些模型则会加入频率信息，通过频谱特征提高识别能力。还有一些方法会先对待检测图像进行重建，通过分析重建图与原图之间的差异，来捕捉生成模型的固有属性，从而获得更好的泛化能力。",
-      "再者需要考虑的就是训练数据。比起早期AI模型批量生成的图像，那些使用经过对抗生成的、更难辨别的图像进行训练的模型会有更强的鲁棒性。",
-      "这三个维度的差异，构成了不同工具识别能力差异的基础。如果一款工具在模型训练时覆盖的生成模型足够广、提取的特征足够有效、训练数据足够复杂，那么整体识别能力自然会更强。",
-      "但频域分析本身存在一个天然缺陷：跨模型泛化能力较弱。",
-      "例如，一款基于GAN-1模型训练的检测工具，在面对由Diffusion模型或升级后的GAN-2模型生成的图像时，识别准确率可能会显著下降。而现实情况是，用于生成AI图像的模型正在不断进化，新产品、新算法层出不穷。",
-      "这意味着，面对海量、不断变化的AI生成图像，没有任何检测工具能够保证100%的准确率。同样的逻辑也适用于其他模态，例如文本和视频——依赖类似二分类思路的检测工具，也不可能做到完全准确。",
-      "这时，有人提出了另一种思路：既然模型的学习能力无法泛化，那我们可不可以将问题简单化，在AI生成内容中嵌入永久标记，让检测系统只需寻找这些标记即可判断来源。",
-      "Gemini Pro就是这么做的。该模型的母公司google本身就开发了大量文生图像模型，比如Veo, 并在其中嵌入了名为SynthID的水印技术。通过探查这些水印，Gemni Pro就能精准狙击由Google AI生成的图像。Google还将SynthID扩展到了更多内容类型，包括文本、音频和视频。",
-      "这种方法有明显的局限性，那就是它只对Google自己的模型有效。其他生成式AI平台，例如Midjourney或Sora，并不会使用SynthID，因此Gemini无法检测这些来源的内容。",
-      "但换个思路，如果能够建立统一的标准——例如所有AI公司都在生成内容中嵌入类似水印，或者建立类似互联网TCP/IP那样的通用协议，这个问题也能解决。",
-      "事实上，科技公司已经在尝试这样做。Google在2024年加入了内容溯源与真实性联盟（C2PA）。这个联盟提出了一套开放技术标准，用于记录数字内容的来源与编辑历史。Meta、OpenAI、Adobe等公司都是该联盟成员。",
-      "但这种方案仍然面临两个现实问题。首先你无法强制所有创造文生图像模型的公司都遵循同一标准，因为AI产业是全球性的，即便通过立法推动，也很难做到全面统一。",
-      "其次，水印本身可以被移除或篡改。虽然当前的水印技术可以抵抗裁剪、缩放或滤镜处理，但对于具备技术能力的人来说，水印仍然可能被破解。",
-      "为了应对这些问题，C2PA的成员正在开发更严格的内容溯源技术，以加强对篡改行为的防护。但无论如何，现阶段，水印还不能成为万能解决方案。",
-      "就当下的AIGC技术进展而言，除了频域分析和水印技术之外，图像本身及其场外信息仍然是重要的判断依据，而且有时甚至比算法更直接。",
-      "这些信息包括图像的内容是否符合解剖学和物理学规律，是否符合地理与社会背景，图像的来源与传播路径是否有AI痕迹、文件命名方式和元数据等是否能透露出AIGC模型的信息等等。这些也是专业事实核查员长期使用的技术路径。",
-      "Gemini 3 Pro能够具备较为准确的图像识别能力，或许和它借鉴了这些技术路径有关。比如它可以注意到细微的AI视觉痕迹，诸如不符合物理规律的物体、异常光滑的“AI皮肤”等。同时，它还可以识别生成式AI常见的文件命名方式、可见水印，甚至一些AI应用添加的图标标记。",
-      "尽管如此，我还是认为，无论AI检测工具如何发展，人类都不应该把判断真伪的最终决定权完全交给机器。",
-      "因为工具无法做到100%准确，也就不可能100%可信。倘若人们全然依赖工具的判断，那不仅会导致独立思考能力的丧失，还可能制造冤假错案、导致信任危机。",
-      "这并非杞人忧天。Reddit上曾出现过一个案例：有人花了几个小时撰写奖学金申请文，满怀希望提交后，却被系统标记为“AI生成”。没有证据，也没有解释，只有一个冷冰冰的自动标签——“你的内容不是真的”。",
-      "类似的情况可能出现在所有内容创作领域。人们可能因为“写得太好”或“风格太明显”，而被怀疑使用AI。与此同时，生成式AI却可能凭借效率优势迅速占领内容生产领域。写作、绘画、编程、影视、音乐、视觉设计，都可能被AI深度介入。",
-      "使用AI辅助创作本身并没有问题，但问题在于：我们能够接受到什么程度？我们是否愿意生活在一个信息来源模糊、所有内容都只有“90%概率是AI生成”的世界？",
-      "至少，人类应当拥有识别内容创作者的能力，避免信息生产被少数技术主体垄断。但关键问题仍然是：How？",
-      "这或许不仅仅是AI检测工具需要解决的问题，而是整个时代留给人类社会的一道难题。",
-    ],
+    letter: "G",
+    category: "AIGC Lab",
+    titleEn: "Lab | Gemini vs ChatGPT: Who Can Tell 12 Videos Apart?",
+    titleZh: "明查·实验室｜Gemini对阵ChatGPT，谁能辨认出12段视频真假？",
+    descEn: "Testing AI models' ability to distinguish real videos from AI-generated ones.",
+    descZh: "测试AI模型辨别真实视频与AI生成视频的能力。",
+    dateEn: "November 20, 2025",
+    dateZh: "2025年11月20日",
+    image: blogExt4,
+    externalLink: "https://m.thepaper.cn/newsDetail_forward_31983671",
+    contentEn: [],
+    contentZh: [],
   },
   {
-    slug: "cinematic-typography",
-    type: "blog",
-    letter: "V",
-    category: "Visual Culture",
-    titleEn: "Notes on Cinematic Typography",
-    titleZh: "关于电影排版的笔记",
-    descEn:
-      "Exploring the intersection of film title design, editorial layout, and contemporary visual identity systems.",
-    descZh: "探索电影片名设计、编辑版式与当代视觉识别系统的交汇点。",
-    dateEn: "February 2026",
-    dateZh: "2026年2月",
-    image: "https://hivemoderation.com/images/c88713d.png",
-    contentEn: [
-      "The title sequence exists in a liminal space — neither fully part of the film nor entirely separate from it. It is a threshold, a moment of anticipation where typography becomes cinema and letterforms take on the weight of narrative.",
-      "From Saul Bass's revolutionary work on Vertigo and Anatomy of a Murder to the digital experimentation of contemporary designers, film typography has served as a laboratory for pushing the boundaries of what letters can do.",
-      "The best title sequences understand that typography is not merely informational — it is atmospheric. The choice of typeface, its animation, its relationship to the frame, all contribute to the viewer's emotional preparation for the story ahead.",
-      "In the age of streaming, where audiences routinely skip intros, the art of the title sequence faces new challenges. Yet this constraint has paradoxically inspired some of the most innovative work in the field, as designers seek to create sequences too compelling to skip.",
-    ],
-    contentZh: [
-      "片头序列存在于一个阈限空间——既不完全属于电影的一部分，也不完全独立于电影之外。它是一个门槛，一个期待的时刻，排版在这里变成电影，字形承载了叙事的重量。",
-      "从索尔·巴斯在《迷魂记》和《桃色案件》上的革命性作品，到当代设计师的数字实验，电影排版一直是推动字母表达边界的实验室。",
-      "最好的片头序列理解排版不仅仅是信息性的——它是氛围性的。字体的选择、动画、与画面的关系，都有助于观众对即将到来的故事的情感准备。",
-      "在流媒体时代，观众经常跳过片头，片头序列的艺术面临新的挑战。然而，这种限制矛盾地激发了该领域一些最具创新性的作品，设计师们努力创造令人无法跳过的序列。",
-    ],
-  },
-  {
-    slug: "lost-in-translation",
-    type: "blog",
-    letter: "L",
-    category: "Language & Literature",
-    titleEn: "Lost in Translation, Found in Context",
-    titleZh: "迷失在翻译中，在语境中被发现",
-    descEn: "On the untranslatable and the poetics of cross-cultural communication. A personal essay.",
-    descZh: "关于不可翻译性和跨文化交流的诗学。一篇个人随笔。",
-    dateEn: "January 2026",
-    dateZh: "2026年1月",
-    contentEn: [
-      "There are words that refuse to cross borders. The Japanese 木漏れ日 (komorebi) — sunlight filtering through leaves — has no single English equivalent. The Portuguese saudade carries a weight of longing that 'nostalgia' only approximates. These linguistic gaps are not failures of language but revelations of cultural perception.",
-      "Translation, at its best, is not a mechanical transfer of meaning but an act of creative interpretation. The translator must inhabit two worlds simultaneously, feeling the texture of each language while building bridges between them.",
-      "In my own work navigating between Chinese and English, I've come to see translation less as a problem to be solved and more as a space to be explored. The gaps between languages are where the most interesting cultural insights emerge.",
-      "The rise of machine translation has not diminished the need for human translators — it has clarified their essential role. AI can transfer denotation with increasing accuracy, but connotation, cultural resonance, and poetic intention remain fundamentally human domains.",
-    ],
-    contentZh: [
-      "有些词拒绝跨越国界。日语的「木漏れ日」——阳光透过树叶洒落——在英语中没有单一的对应词。葡萄牙语的 saudade 承载着一种「怀旧」只能近似表达的渴望。这些语言缺口不是语言的失败，而是文化感知的揭示。",
-      "翻译在最好的时候不是意义的机械转移，而是一种创造性解读的行为。译者必须同时栖居在两个世界，感受每种语言的质地，同时在它们之间架设桥梁。",
-      "在我自己在中文和英文之间穿梭的工作中，我逐渐将翻译视为一个需要探索的空间，而非一个需要解决的问题。语言之间的缺口正是最有趣的文化洞察浮现之处。",
-      "机器翻译的兴起并没有减少对人工翻译的需求——它澄清了他们的本质角色。AI 可以以越来越高的准确性转移所指意义，但内涵意义、文化共鸣和诗意意图仍然是根本性的人类领域。",
-    ],
-  },
-  {
-    slug: "data-as-narrative",
-    type: "blog",
-    letter: "D",
-    category: "Digital Experience",
-    titleEn: "Data as Narrative",
-    titleZh: "数据即叙事",
-    descEn:
-      "When information design becomes storytelling — reflections on building visual systems for complex datasets.",
-    descZh: "当信息设计变成叙事——关于为复杂数据集构建视觉系统的反思。",
-    dateEn: "December 2025",
-    dateZh: "2025年12月",
-    contentEn: [
-      "Every dataset tells a story, but not every visualization reveals it. The challenge of data narrative is not merely technical — it's editorial. What do you include? What do you leave out? Where do you direct the viewer's attention?",
-      "The most compelling data visualizations share qualities with great journalism: they have a clear point of view, they respect their audience's intelligence, and they reveal something that wasn't obvious before.",
-      "In my practice, I've found that the most effective approach starts not with the data but with the question. What does the audience need to understand? What decision does this information support? Only then does the appropriate visual form emerge.",
-    ],
-    contentZh: [
-      "每个数据集都讲述一个故事，但不是每个可视化都能揭示它。数据叙事的挑战不仅仅是技术性的——它是编辑性的。你包含什么？你省略什么？你将观众的注意力引向哪里？",
-      "最引人注目的数据可视化与优秀的新闻报道有共同的品质：它们有清晰的观点，尊重受众的智慧，并揭示之前不明显的东西。",
-      "在我的实践中，我发现最有效的方法不是从数据开始，而是从问题开始。受众需要理解什么？这些信息支持什么决策？只有这样，适当的视觉形式才会浮现。",
-    ],
-  },
-  {
-    slug: "manufacturing-clarity",
-    type: "blog",
-    letter: "M",
-    category: "Media & Society",
-    titleEn: "Manufacturing Clarity",
-    titleZh: "制造清晰",
-    descEn: "A critical look at how media platforms engineer understanding — and misunderstanding — at scale.",
-    descZh: "批判性审视媒体平台如何大规模地制造理解——和误解。",
-    dateEn: "November 2025",
-    dateZh: "2025年11月",
-    contentEn: [
-      "In an age of algorithmic curation, clarity itself has become a manufactured product. Social media platforms don't just distribute information — they shape how we understand it, through framing, sequencing, and the subtle architecture of attention.",
-      "The paradox of modern media is that we have more access to information than ever before, yet feel less certain about what is true. This is not accidental — it is a structural feature of platforms designed to maximize engagement rather than understanding.",
-      "The antidote is not more information but better frameworks for evaluating it. Media literacy, source verification, and critical thinking are no longer optional skills — they are essential tools for navigating contemporary reality.",
-    ],
-    contentZh: [
-      "在算法策展的时代，清晰本身已成为一种制造的产品。社交媒体平台不仅分发信息——它们通过框架、排序和注意力的微妙架构来塑造我们理解信息的方式。",
-      "现代媒体的悖论是，我们比以往任何时候都能获得更多信息，却对什么是真实的感到更不确定。这不是偶然的——这是旨在最大化参与度而非理解力的平台的结构性特征。",
-      "解药不是更多信息，而是更好的评估框架。媒体素养、来源验证和批判性思维不再是可选技能——它们是驾驭当代现实的基本工具。",
-    ],
-  },
-  {
-    slug: "shanghai-frequencies",
+    slug: "six-finger-boy-ai",
     type: "blog",
     letter: "S",
-    category: "Shanghai",
-    titleEn: "Shanghai Frequencies",
-    titleZh: "上海频率",
-    descEn: "Field notes on the sonic and visual textures of a city in constant transformation.",
-    descZh: "关于一座不断变化的城市的声音与视觉质地的田野笔记。",
-    dateEn: "October 2025",
-    dateZh: "2025年10月",
-    contentEn: [
-      "Shanghai speaks in frequencies. The low hum of construction that never ceases. The staccato rhythm of mahjong tiles in lane houses. The digital chime of Alipay transactions echoing through convenience stores at 3 AM.",
-      "This city resists documentation even as it demands it. Every photograph is already obsolete by the time it's taken — the building behind you might be gone next month, replaced by something taller, shinier, more aligned with whatever vision is currently ascendant.",
-      "To live in Shanghai is to develop a tolerance for impermanence. The city teaches you that nostalgia is a luxury and adaptation is a survival skill. What remains constant is the energy — that particular Shanghai frequency that vibrates through everything.",
-    ],
-    contentZh: [
-      "上海用频率说话。永不停歇的建筑低鸣。弄堂里麻将牌的断奏节拍。凌晨三点便利店里支付宝交易的数字铃声回响。",
-      "这座城市在要求被记录的同时又拒绝被记录。每张照片在拍摄的那一刻就已经过时——你身后的建筑下个月可能就消失了，被更高、更亮、更符合当前主流愿景的东西取代。",
-      "生活在上海就是培养对无常的容忍。这座城市教你怀旧是一种奢侈，适应是一种生存技能。唯一不变的是能量——那种贯穿一切的独特上海频率。",
-    ],
+    category: "AIGC Lab",
+    titleEn: "Lab | This 'Six-Fingered Boy' — Do LLMs Know It's AI-Made?",
+    titleZh: "明查·实验室｜这个\u201C六指小男孩\u201D，大模型知道TA是AI造的吗？",
+    descEn: "Testing whether large language models can identify AI-generated images with visible artifacts.",
+    descZh: "测试大语言模型能否识别带有可见瑕疵的AI生成图像。",
+    dateEn: "November 19, 2025",
+    dateZh: "2025年11月19日",
+    image: blogExt3,
+    externalLink: "https://m.thepaper.cn/newsDetail_forward_31983647",
+    contentEn: [],
+    contentZh: [],
+  },
+  {
+    slug: "ai-fact-checker-models",
+    type: "blog",
+    letter: "A",
+    category: "AIGC Lab",
+    titleEn: "Lab | 'AI Fact-Checkers' Online: Which of Four Models Is Most Reliable?",
+    titleZh: "明查·实验室｜\u201CAI核查员\u201D上线，四大模型谁最靠谱？",
+    descEn: "Comparing four mainstream AI models in their ability to assist fact-checking work.",
+    descZh: "比较四大主流AI模型辅助事实核查工作的能力。",
+    dateEn: "November 18, 2025",
+    dateZh: "2025年11月18日",
+    image: blogExt2,
+    externalLink: "https://m.thepaper.cn/newsDetail_forward_31966879",
+    contentEn: [],
+    contentZh: [],
+  },
+  {
+    slug: "ai-images-israel-iran",
+    type: "blog",
+    letter: "I",
+    category: "Fact Check",
+    titleEn: "AI Images Flood Israel-Iran Conflict: War Imagery Hard to Distinguish",
+    titleZh: "明查｜AI图像席卷以伊冲突，真假难辨的战争影像应接不暇",
+    descEn: "Investigating the proliferation of AI-generated images in the Israel-Iran conflict.",
+    descZh: "调查以伊冲突中AI生成图像的泛滥。",
+    dateEn: "July 1, 2025",
+    dateZh: "2025年7月1日",
+    image: blogExt1,
+    externalLink: "https://m.thepaper.cn/newsDetail_forward_31067780",
+    contentEn: [],
+    contentZh: [],
+  },
+  {
+    slug: "satellite-imagery-realtime",
+    type: "blog",
+    letter: "S",
+    category: "OSINT Toolbox",
+    titleEn: "Toolbox | What Does the World Look Like Right Now? Satellite Imagery Offers Clues",
+    titleZh: "明查·工具箱｜此时此刻的世界是何模样？实时卫星图像可窥得一二",
+    descEn: "How to use real-time satellite imagery for open-source investigation and verification.",
+    descZh: "如何利用实时卫星图像进行开源调查与核实。",
+    dateEn: "October 5, 2024",
+    dateZh: "2024年10月5日",
+    image: blogExt5,
+    externalLink: "https://m.thepaper.cn/newsDetail_forward_28876586",
+    contentEn: [],
+    contentZh: [],
+  },
+  {
+    slug: "destroyed-building-proof",
+    type: "blog",
+    letter: "D",
+    category: "OSINT Toolbox",
+    titleEn: "Toolbox | A Destroyed Building — How to Prove It Once Existed?",
+    titleZh: "明查·工具箱｜一栋被炸毁的大楼，如何证明这世界ta来过？",
+    descEn: "Using archival tools and techniques to document structures destroyed in conflict.",
+    descZh: "利用档案工具和技术记录在冲突中被摧毁的建筑。",
+    dateEn: "October 4, 2024",
+    dateZh: "2024年10月4日",
+    image: blogExt6,
+    externalLink: "https://m.thepaper.cn/newsDetail_forward_28876571",
+    contentEn: [],
+    contentZh: [],
+  },
+  {
+    slug: "geolocation-investigation",
+    type: "blog",
+    letter: "G",
+    category: "OSINT Toolbox",
+    titleEn: "Toolbox | Solving Cases with Just One Photo? Learn Geolocation",
+    titleZh: "明查·工具箱｜破案全凭一张图？学会地理定位，被骗没那么容易",
+    descEn: "A guide to geolocation techniques for verifying images and claims.",
+    descZh: "利用地理定位技术核实图像和说法的指南。",
+    dateEn: "October 3, 2024",
+    dateZh: "2024年10月3日",
+    image: blogExt7,
+    externalLink: "https://m.thepaper.cn/newsDetail_forward_28876499",
+    contentEn: [],
+    contentZh: [],
+  },
+  {
+    slug: "dns-website-verification",
+    type: "blog",
+    letter: "D",
+    category: "OSINT Toolbox",
+    titleEn: "Toolbox | Is Your News Source Reliable? Check Its DNS",
+    titleZh: "明查·工具箱｜你获取信息的网站靠谱吗？看下DNS信息吧",
+    descEn: "How DNS information can help verify the credibility of news websites.",
+    descZh: "DNS信息如何帮助核实新闻网站的可信度。",
+    dateEn: "May 2, 2024",
+    dateZh: "2024年5月2日",
+    image: blogExt8,
+    externalLink: "https://m.thepaper.cn/newsDetail_forward_27224988",
+    contentEn: [],
+    contentZh: [],
+  },
+  {
+    slug: "chatgpt-fake-tool",
+    type: "blog",
+    letter: "C",
+    category: "Fact Check",
+    titleEn: "The Most Powerful Fake Tool in History? How Fact-Checkers View ChatGPT",
+    titleZh: "聚焦｜史上最强造假工具？核查从业者如何看待ChatGPT",
+    descEn: "Fact-checking professionals' perspectives on the risks and potentials of ChatGPT.",
+    descZh: "事实核查从业者对ChatGPT的风险与潜力的看法。",
+    dateEn: "February 15, 2023",
+    dateZh: "2023年2月15日",
+    image: blogExt9,
+    externalLink: "https://m.thepaper.cn/newsDetail_forward_21921265",
+    contentEn: [],
+    contentZh: [],
+  },
+  {
+    slug: "queen-funeral-flight-tracking",
+    type: "blog",
+    letter: "Q",
+    category: "OSINT Toolbox",
+    titleEn: "Toolbox | 5 Million Watched the Queen's Coffin Flight — How?",
+    titleZh: "明查·工具箱｜500万人围观英女王灵柩专机，怎么做到的？",
+    descEn: "How flight tracking technology enabled millions to follow the Queen's final journey.",
+    descZh: "航班追踪技术如何让数百万人追踪了女王的最后旅程。",
+    dateEn: "January 24, 2023",
+    dateZh: "2023年1月24日",
+    image: blogExt10,
+    externalLink: "https://m.thepaper.cn/newsDetail_forward_21677912",
+    contentEn: [],
+    contentZh: [],
   },
 ];
 
@@ -423,10 +421,17 @@ export const blogArticles: Article[] = [
 // ============================================================
 export const featuredWorkSlugs = ["freshman", "savor", "beyond-the-limits", "balmain-beauty", "the-blimp"];
 
-export function getArticleBySlug(slug: string): Article | undefined {
-  return [...workArticles, ...blogArticles].find((a) => a.slug === slug);
-}
+// ============================================================
+// 🖼️ INLINE IMAGES — Used for inline images in article body
+// ============================================================
+import blogInline1 from "@/assets/blog-inline-1.jpg";
+import blogInline2 from "@/assets/blog-inline-2.jpg";
+import blogInline3 from "@/assets/blog-inline-3.jpg";
+import blogInline4 from "@/assets/blog-inline-4.jpg";
 
-export function getAllArticles(): Article[] {
-  return [...workArticles, ...blogArticles];
-}
+export const inlineImages = [blogInline1, blogInline2, blogInline3, blogInline4];
+
+// Helper to find article by slug
+export const getArticleBySlug = (slug: string): Article | undefined => {
+  return [...workArticles, ...blogArticles].find((a) => a.slug === slug);
+};
