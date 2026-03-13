@@ -3,16 +3,7 @@ import work2 from "@/assets/work-2.jpg";
 import work3 from "@/assets/work-3.jpg";
 import work4 from "@/assets/work-4.jpg";
 import work5 from "@/assets/work-5.jpg";
-import blogExt1 from "@/assets/blog-ext-1.jpg";
-import blogExt2 from "@/assets/blog-ext-2.jpg";
-import blogExt3 from "@/assets/blog-ext-3.jpg";
-import blogExt4 from "@/assets/blog-ext-4.jpg";
-import blogExt5 from "@/assets/blog-ext-5.jpg";
-import blogExt6 from "@/assets/blog-ext-6.jpg";
-import blogExt7 from "@/assets/blog-ext-7.jpg";
-import blogExt8 from "@/assets/blog-ext-8.jpg";
-import blogExt9 from "@/assets/blog-ext-9.jpg";
-import blogExt10 from "@/assets/blog-ext-10.jpg";
+import blogCoverDefault from "@/assets/blog-cover-default.png";
 
 export interface Article {
   slug: string;
