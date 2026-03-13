@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,24 +10,21 @@ const Blog = () => {
   const rest = blogArticles.slice(1);
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
-      <Header />
+    <div className="min-h-screen bg-white text-black">
+      <Header variant="light" />
 
       <main>
-        {/* Featured Hero */}
+        {/* Featured Hero — Bellingcat style */}
         {featured && (
           <section className="pt-20">
-            <a
-              href={`/blog/${featured.slug}`}
-              className="block group"
-            >
+            <Link to={`/blog/${featured.slug}`} className="block group">
               <div className="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden">
                 <img
                   src={featured.image}
                   alt={t(featured.titleEn, featured.titleZh)}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 saturate-[0.3]"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/90 via-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12 lg:p-16">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="font-mono text-[10px] tracking-[0.3em] text-white/70 uppercase bg-white/10 backdrop-blur-sm px-3 py-1">
@@ -44,62 +42,61 @@ const Blog = () => {
                   </p>
                 </div>
               </div>
-            </a>
+            </Link>
           </section>
         )}
 
         {/* Section Label */}
         <section className="px-6 md:px-12 lg:px-16 pt-16 pb-8">
-          <h2 className="font-article-heading text-2xl md:text-3xl text-white tracking-tight">
+          <h2 className="font-article-heading text-2xl md:text-3xl text-black tracking-tight">
             {t("Latest", "最新文章")}
           </h2>
         </section>
 
-        {/* Grid Layout */}
+        {/* Grid / Masonry Layout */}
         <section className="px-6 md:px-12 lg:px-16 pb-32">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {rest.map((post, i) => {
+              // Vary card heights for masonry feel
               const isLarge = i % 5 === 0;
               return (
-                <a
+                <Link
                   key={post.slug}
-                  href={post.externalLink || `/blog/${post.slug}`}
-                  target={post.externalLink ? "_blank" : undefined}
-                  rel={post.externalLink ? "noopener noreferrer" : undefined}
+                  to={`/blog/${post.slug}`}
                   className={`group block ${isLarge ? "md:col-span-2 lg:col-span-1" : ""}`}
                 >
                   <article className="space-y-4">
                     {/* Cover Image */}
                     <div className={`overflow-hidden ${isLarge ? "aspect-[4/3]" : "aspect-[3/2]"}`}>
                       <img
-                        src={post.image}
+                        src={https://imagecloud.thepaper.cn/thepaper/image/235/531/483.png}
                         alt={t(post.titleEn, post.titleZh)}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 saturate-[0.3]"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
 
                     {/* Meta */}
                     <div className="flex items-center gap-3">
-                      <span className="font-mono text-[10px] tracking-[0.3em] text-white/50 uppercase">
+                      <span className="font-mono text-[10px] tracking-[0.3em] text-black/50 uppercase">
                         {post.category}
                       </span>
-                      <span className="w-3 h-px bg-white/20" />
-                      <span className="font-mono text-[10px] tracking-[0.2em] text-white/30 uppercase">
+                      <span className="w-3 h-px bg-black/20" />
+                      <span className="font-mono text-[10px] tracking-[0.2em] text-black/30 uppercase">
                         {t(post.dateEn, post.dateZh)}
                       </span>
                     </div>
 
                     {/* Title */}
-                    <h3 className="font-article-heading text-lg md:text-xl text-white leading-snug tracking-tight group-hover:opacity-70 transition-opacity duration-300">
+                    <h3 className="font-article-heading text-lg md:text-xl text-black leading-snug tracking-tight group-hover:opacity-70 transition-opacity duration-300">
                       {t(post.titleEn, post.titleZh)}
                     </h3>
 
                     {/* Description */}
-                    <p className="font-article-body text-sm text-white/40 leading-relaxed line-clamp-3">
+                    <p className="font-article-body text-sm text-black/50 leading-relaxed line-clamp-3">
                       {t(post.descEn, post.descZh)}
                     </p>
                   </article>
-                </a>
+                </Link>
               );
             })}
           </div>
