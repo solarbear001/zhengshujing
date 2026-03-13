@@ -443,7 +443,8 @@ export const blogArticles: Article[] = [
     descZh: "利用地理定位技术核实图像和说法的指南。",
     dateEn: "October 3, 2024",
     dateZh: "2024年10月3日",
-    image: "https://imagecloud.thepaper.cn/thepaper/image/323/906/264.jpg",
+    image:
+      "https://eliteextra.com/wp-content/uploads/2022/10/going-beyond-multi-stop-gps-empowering-your-drivers-with-the-best-routing-software-around-980x551.jpg",
     externalLink: "https://m.thepaper.cn/newsDetail_forward_28876499",
     contentEn: [],
     contentZh: [],
@@ -491,7 +492,8 @@ export const blogArticles: Article[] = [
     descZh: "航班追踪技术如何让数百万人追踪了女王的最后旅程。",
     dateEn: "January 24, 2023",
     dateZh: "2023年1月24日",
-    image: "https://imagecloud.thepaper.cn/thepaper/image/235/531/483.png",
+    image:
+      "https://preview.redd.it/i-guess-all-flights-are-back-and-can-just-totally-avoid-v0-0fxvcugrfcng1.png?width=1080&crop=smart&auto=webp&s=a51e2bd17e3c288adb7dbb20a97497e4617f3de6",
     externalLink: "https://m.thepaper.cn/newsDetail_forward_21677912",
     contentEn: [],
     contentZh: [],
