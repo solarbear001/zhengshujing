@@ -346,7 +346,7 @@ export const blogArticles: Article[] = [
     dateEn: "November 20, 2025",
     dateZh: "2025年11月20日",
     image:
-      "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/final_keyword_header.width-1600.format-webp.webp",
+      "https://images.unsplash.com/photo-1738107450281-45c52f7d06d0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     externalLink: "https://m.thepaper.cn/newsDetail_forward_31983671",
     contentEn: [],
     contentZh: [],
