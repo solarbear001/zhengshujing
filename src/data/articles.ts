@@ -259,8 +259,6 @@ export const blogArticles: Article[] = [
     dateEn: "March 10, 2026",
     dateZh: "2026年11月20日",
     image: blogCoverDefault,
-    creditsEn: "Fact-checkers: Zheng Shujing, Du Xinyue · Poster design: Bai Lang",
-    creditsZh: "明查员 郑淑婧 杜新月 海报设计 白浪",
     inlineImages: [blogFeaturedInline1, blogFeaturedInline2],
     contentEn: [
       "**[Editor's Note]**",
