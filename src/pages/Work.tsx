@@ -14,15 +14,15 @@ const Work = () => {
         {/* Hero */}
         <section className="min-h-[70vh] flex flex-col items-center justify-center px-6 md:px-20 pt-32 pb-16">
           <div className="max-w-4xl w-full text-center space-y-6">
-            <h1 className="text-display tracking-tight text-foreground">w rk</h1>
+            <h1 className="text-display tracking-tight text-foreground">wo rk</h1>
             <p
               className="text-display tracking-tight text-foreground/40"
               style={{ fontSize: "clamp(28px, 4vw, 60px)" }}
             >
-              ( a selection ) 2026
+              ( a selection ) 2022-2026
             </p>
             <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground uppercase mt-8">
-              ( {workArticles.length} ) {t("Prj cts & xpl r tns", "项目与探索")}
+              ( {workArticles.length} ) {t("Pr j cts & expl r tns", "项目与探索")}
             </p>
           </div>
         </section>
