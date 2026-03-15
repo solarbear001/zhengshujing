@@ -63,7 +63,8 @@ const About = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background cursor-none">
+      <CustomCursor />
       <Header />
       <main>
         {/* 1 — Hero Section */}
