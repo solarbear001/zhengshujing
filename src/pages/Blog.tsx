@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { blogArticles } from "@/data/articles";
 import { Search } from "lucide-react";
+import CustomCursor from "@/components/CustomCursor";
 
 const CATEGORIES = ["All", "AI", "Web", "Geolocation", "Maps"] as const;
 
@@ -81,7 +82,8 @@ const Blog = () => {
   }, [activeCategory, searchQuery]);
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-white text-black cursor-none">
+      <CustomCursor />
       {/* Global Header */}
       <Header variant="light" />
 
