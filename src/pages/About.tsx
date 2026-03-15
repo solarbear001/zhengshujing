@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import CustomCursor from "@/components/CustomCursor";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -62,7 +63,8 @@ const About = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background cursor-none">
+      <CustomCursor />
       <Header />
       <main>
         {/* 1 — Hero Section */}

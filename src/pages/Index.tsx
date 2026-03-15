@@ -3,10 +3,12 @@ import HeroSection from "@/components/HeroSection";
 import QuoteSection from "@/components/QuoteSection";
 import FeaturedWork from "@/components/FeaturedWork";
 import Footer from "@/components/Footer";
+import CustomCursor from "@/components/CustomCursor";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background cursor-none">
+      <CustomCursor />
       <Header />
       <main>
         <HeroSection />
