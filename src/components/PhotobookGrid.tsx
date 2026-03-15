@@ -4,11 +4,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { workArticles } from "@/data/articles";
 
-// Map work articles to approximate dates based on their dateEn field
 function parseDateFromArticle(dateEn: string): Date {
   const d = new Date(dateEn);
   if (!isNaN(d.getTime())) return d;
-  // Try "Month Year" format
   const parts = dateEn.split(" ");
   if (parts.length >= 2) {
     const attempt = new Date(`${parts[0]} 15, ${parts[parts.length - 1]}`);
@@ -20,8 +18,8 @@ function parseDateFromArticle(dateEn: string): Date {
 const START_DATE = new Date("2022-01-01");
 const END_DATE = new Date("2026-03-15");
 const ROWS = 7;
-const CELL_W = 44;
-const CELL_H = 60;
+const GRID_TOP = 100; // px from top of sticky container
+const GRID_BOTTOM = 36; // px from bottom for hint
 
 function daysBetween(a: Date, b: Date) {
   return Math.floor((b.getTime() - a.getTime()) / (1000 * 60 * 60 * 24));
