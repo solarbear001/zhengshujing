@@ -82,7 +82,8 @@ const Blog = () => {
   }, [activeCategory, searchQuery]);
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-white text-black cursor-none">
+      <CustomCursor />
       {/* Global Header */}
       <Header variant="light" />
 
