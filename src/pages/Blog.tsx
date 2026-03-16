@@ -82,22 +82,22 @@ const Blog = () => {
   }, [activeCategory, searchQuery]);
 
   return (
-    <div className="min-h-screen bg-white text-black cursor-none">
+    <div className="min-h-screen bg-black text-white cursor-none">
       <CustomCursor />
       {/* Global Header */}
-      <Header variant="light" />
+      <Header />
 
       {/* Sticky Search Bar — below header */}
-      <div className="sticky top-[72px] z-40 bg-white border-b border-black/5">
+      <div className="sticky top-[72px] z-40 bg-black border-b border-white/10">
         <div className="max-w-2xl mx-auto px-6 py-3">
           <div className="relative">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-black/30" />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
             <input
               type="text"
               placeholder={t("Search blogs", "搜索文章")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full h-8 pl-10 pr-4 rounded-full bg-black/[0.04] text-sm font-sans text-black placeholder:text-black/30 outline-none focus:bg-black/[0.06] transition-colors duration-200"
+              className="w-full h-8 pl-10 pr-4 rounded-full bg-white/[0.08] text-sm font-sans text-white placeholder:text-white/30 outline-none focus:bg-white/[0.12] transition-colors duration-200"
             />
           </div>
         </div>
@@ -106,7 +106,7 @@ const Blog = () => {
       <main>
         {/* Title & Category Tabs */}
         <section className="max-w-6xl mx-auto px-6 md:px-20 pt-10 pb-6">
-          <h1 className="font-sans text-2xl font-semibold text-black tracking-tight mb-6">
+          <h1 className="font-sans text-2xl font-semibold text-white tracking-tight mb-6">
             {t("Latest", "最新")}
           </h1>
           <div className="flex items-center gap-2 flex-wrap">
@@ -116,8 +116,8 @@ const Blog = () => {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-1.5 rounded-full text-xs font-medium tracking-wide transition-all duration-200 ${
                   activeCategory === cat
-                    ? "bg-black text-white"
-                    : "bg-transparent text-black/60 hover:bg-black/5"
+                    ? "bg-white text-black"
+                    : "bg-transparent text-white/60 hover:bg-white/10"
                 }`}
               >
                 {cat === "All" ? t("All", "全部") : cat}
