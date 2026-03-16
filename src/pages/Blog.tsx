@@ -204,13 +204,13 @@ const CardContent = ({
 
       {/* Text */}
       <div className="mt-3 space-y-1">
-        <h3 className="font-sans text-sm font-medium text-black leading-snug line-clamp-2 group-hover:text-black/70 transition-colors duration-200">
+        <h3 className="font-sans text-sm font-medium text-white leading-snug line-clamp-2 group-hover:text-white/70 transition-colors duration-200">
           {t(post.titleEn, post.titleZh)}
         </h3>
-        <p className="font-sans text-xs text-black/40 line-clamp-2">
+        <p className="font-sans text-xs text-white/40 line-clamp-2">
           {t(post.descEn, post.descZh)}
         </p>
-        <p className="font-sans text-[11px] text-black/25">
+        <p className="font-sans text-[11px] text-white/25">
           {t(post.dateEn, post.dateZh)}
         </p>
       </div>
