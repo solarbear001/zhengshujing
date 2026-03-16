@@ -164,7 +164,7 @@ const Blog = () => {
           {/* Infinite scroll trigger */}
           {hasMore && (
             <div ref={loaderRef} className="flex justify-center py-10">
-              <div className="w-5 h-5 border-2 border-black/10 border-t-black/40 rounded-full animate-spin" />
+              <div className="w-5 h-5 border-2 border-white/10 border-t-white/40 rounded-full animate-spin" />
             </div>
           )}
         </section>
