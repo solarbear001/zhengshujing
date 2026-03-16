@@ -85,7 +85,7 @@ export const workArticles: Article[] = [
     type: "work",
     letter: "S",
     category: "International Communication",
-    titleEn: ""Great Translation"",
+    titleEn: '"Great Translation"',
     titleZh: "大翻译运动",
     descEn:
       "Open-source intelligence research project tracking supply chain transparency across Southeast Asian markets.",
