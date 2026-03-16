@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { useLanguage } from "@/contexts/LanguageContext";
 import { workArticles } from "@/data/articles";
 
-import work1 from "@/assets/work-1.jpg";
+import work1 from "https://cdn.sanity.io/images/hvd5n54p/production/8b943ac98777fc5dc50e46f6d32bae0a3946fc0b-7680x5760.jpg?w=1200&fm=webp";
 import work2 from "@/assets/work-2.jpg";
 import work3 from "@/assets/work-3.jpg";
 import work4 from "@/assets/work-4.jpg";
@@ -27,10 +27,27 @@ import blog5 from "@/assets/blog-5.jpg";
 import blog6 from "@/assets/blog-6.jpg";
 
 const fillerImages = [
-  work1, work2, work3, work4, work5,
-  blogExt1, blogExt2, blogExt3, blogExt4, blogExt5,
-  blogExt6, blogExt7, blogExt8, blogExt9, blogExt10,
-  blog1, blog2, blog3, blog4, blog5, blog6,
+  work1,
+  work2,
+  work3,
+  work4,
+  work5,
+  blogExt1,
+  blogExt2,
+  blogExt3,
+  blogExt4,
+  blogExt5,
+  blogExt6,
+  blogExt7,
+  blogExt8,
+  blogExt9,
+  blogExt10,
+  blog1,
+  blog2,
+  blog3,
+  blog4,
+  blog5,
+  blog6,
 ];
 
 function parseDateFromArticle(dateEn: string): Date {
@@ -137,7 +154,7 @@ const PhotobookGrid = () => {
   const translateX = useTransform(
     scrollYProgress,
     [0, 1],
-    [0, -(totalScrollWidth - (typeof window !== "undefined" ? window.innerWidth : 1200))]
+    [0, -(totalScrollWidth - (typeof window !== "undefined" ? window.innerWidth : 1200))],
   );
 
   const articlePositions = useMemo(() => {
@@ -163,10 +180,7 @@ const PhotobookGrid = () => {
       const dayIndex = daysBetween(START_DATE, current);
       const col = Math.floor(dayIndex / ROWS);
       const isJan = current.getMonth() === 0;
-      const monthNames = [
-        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
-      ];
+      const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
       labels.push({
         col,
         label: isJan ? `${current.getFullYear()}` : monthNames[current.getMonth()],
@@ -192,11 +206,7 @@ const PhotobookGrid = () => {
   const gridH = ROWS * cellH;
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative"
-      style={{ height: `${Math.max(400, totalCols * 1.8)}vh` }}
-    >
+    <section ref={sectionRef} className="relative" style={{ height: `${Math.max(400, totalCols * 1.8)}vh` }}>
       <div className="sticky top-0 h-screen overflow-hidden flex flex-col">
         {/* Theme title - fixed position, above grid, not clipped */}
         <div
@@ -270,9 +280,7 @@ const PhotobookGrid = () => {
                   width: cellW,
                   height: cellH,
                   fontSize: ml.isJan ? "11px" : "9px",
-                  color: ml.isJan
-                    ? "hsl(0,0%,45%)"
-                    : "hsl(0,0%,28%)",
+                  color: ml.isJan ? "hsl(0,0%,45%)" : "hsl(0,0%,28%)",
                   letterSpacing: "0.1em",
                   writingMode: "vertical-rl",
                 }}
@@ -296,11 +304,7 @@ const PhotobookGrid = () => {
                     </a>
                   )
                 : ({ children, className, style }: any) => (
-                    <Link
-                      to={`/work/${article.slug}`}
-                      className={className}
-                      style={style}
-                    >
+                    <Link to={`/work/${article.slug}`} className={className} style={style}>
                       {children}
                     </Link>
                   );
@@ -327,10 +331,7 @@ const PhotobookGrid = () => {
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-1 left-1 right-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p
-                        className="font-sans text-foreground leading-tight truncate"
-                        style={{ fontSize: "8px" }}
-                      >
+                      <p className="font-sans text-foreground leading-tight truncate" style={{ fontSize: "8px" }}>
                         {t(article.titleEn, article.titleZh)}
                       </p>
                     </div>
