@@ -94,7 +94,7 @@ export const workArticles: Article[] = [
     dateZh: "2022年4月",
     creditsEn: "Research Lead — w/ Global Voices",
     creditsZh: "研究负责人 — 与 Global Voices 合作",
-    image: work2,
+    image: "https://www.globaltimes.cn/Portals/0/attachment/2022/2022-03-31/9609162e-0363-4561-98cb-8233c52f0fae.jpeg",
     contentEn: [
       "Savor is a long-form open-source intelligence project investigating supply chain opacity in Southeast Asian food markets. Using satellite imagery analysis, shipping data cross-referencing, and social media monitoring, the research mapped previously undocumented networks of food distribution across five countries.",
       "The methodology combined traditional investigative techniques with cutting-edge OSINT tools, including geolocation verification, corporate registry analysis, and automated data scraping from public trade databases.",
