@@ -146,7 +146,7 @@ export const workArticles: Article[] = [
     dateZh: "2025年9月",
     creditsEn: "Editor & Content Director",
     creditsZh: "编辑 & 内容总监",
-    image: "https://img.website.xin/contents/sitefiles3607/18035395/images/173544024.png",
+    image: "https://www.tsinghua.edu.cn/__local/F/93/FD/F6C4BC76A2B43AB0D073D2B7BB6_524B4993_B4B9B.jpeg",
     contentEn: [
       "Balmain Beauty was a comprehensive editorial content project for the luxury brand's beauty line launch in the Asia-Pacific market. The work spanned photography direction, copywriting, and the conception of a multi-platform digital campaign.",
       "The editorial approach drew from high fashion photography traditions while incorporating elements of documentary realism — a deliberate tension that reflected the brand's positioning between heritage luxury and contemporary accessibility.",
