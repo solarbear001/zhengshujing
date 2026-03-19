@@ -283,7 +283,7 @@ export const workArticles: Article[] = [
     letter: "明",
     category: "Fact Check",
     titleEn: "Iran School Attack: No Evidence for 'False Flag' Claims",
-    titleZh: "明查｜伊朗女校遭袭，网传"伊朗误炸""假旗行动"说法无实证",
+    titleZh: '明查｜伊朗女校遭袭，网传"伊朗误炸""假旗行动"说法无实证',
     descEn: "Debunking unverified claims about the Iranian school attack.",
     descZh: "核查关于伊朗学校袭击事件的未经证实说法。",
     dateEn: "March 5, 2026",
