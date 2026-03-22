@@ -2493,7 +2493,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "May 12, 2023",
     dateZh: "2023年5月12日",
-    image: "https://mei.edu/wp-content/uploads/2018/11/RussiaIdlib-scaled.jpg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/VDayRehearsal05052016-28.jpg/500px-VDayRehearsal05052016-28.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_23057498",
     contentEn: [],
     contentZh: [],
@@ -3010,7 +3011,8 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "October 31, 2022",
     dateZh: "2022年10月31日",
-    image: "https://www.japantimes.co.jp/uploads/imported_images/uploads/2022/10/np_file_191304.jpeg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Itaewon_%28%EC%9D%B4%ED%83%9C%EC%9B%90%29_2022_Halloween.jpg/500px-Itaewon_%28%EC%9D%B4%ED%83%9C%EC%9B%90%29_2022_Halloween.jpg",
     contentEn: [],
     contentZh: [],
   },
@@ -4286,7 +4288,6 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "October 31, 2022",
     dateZh: "2022年10月31日",
-    image: "https://www.japantimes.co.jp/uploads/imported_images/uploads/2022/10/np_file_191304.jpeg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_20530012",
     contentEn: [],
     contentZh: [],
