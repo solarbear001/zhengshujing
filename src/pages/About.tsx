@@ -268,7 +268,7 @@ const About = () => {
                         key={i}
                         className="font-mono text-sm tracking-[0.1em] text-foreground/80 py-3 border-b border-border"
                       >
-                        {item}
+                        {t(item.en, item.zh)}
                       </li>
                     ))}
                   </ul>
