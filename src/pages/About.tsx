@@ -255,11 +255,14 @@ const About = () => {
                 <CollapsibleSection letter="E" label={t("Events", "项目")}>
                   <ul className="space-y-5">
                     {[
-                      { en: "IFCN Global Fact 10", zh: "国际事实核查网络第十届全球事实核查大会" }
-                      { en:"The International Fact-Checking Partner Summit", zh: "全球明查大会"}
-                      { en: "UN News 《侃侃联合国》", zh: "联合国新闻《侃侃联合国》节目"}
-                      { en: "Media Workshop × Tsinghua", zh: "清华媒体工作坊"}
-                      { en: "Interview: ICRC Head of Strategic Communication, Patricia Ray", zh: "红十字国际委员会采访"}
+                      { en: "IFCN Global Fact 10", zh: "国际事实核查网络第十届全球事实核查大会" },
+                      { en: "The International Fact-Checking Partner Summit", zh: "全球明查大会" },
+                      { en: "UN News 《侃侃联合国》", zh: "联合国新闻《侃侃联合国》节目" },
+                      { en: "Media Workshop × Tsinghua", zh: "清华媒体工作坊" },
+                      {
+                        en: "Interview: ICRC Head of Strategic Communication, Patricia Ray",
+                        zh: "红十字国际委员会采访",
+                      },
                     ].map((item, i) => (
                       <li
                         key={i}
