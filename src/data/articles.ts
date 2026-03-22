@@ -2872,8 +2872,7 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "February 3, 2023",
     dateZh: "2023年2月3日",
-    image:
-      "https://www.syriahr.com/en/wp-content/uploads/2023/01/%D9%82%D8%B5%D9%81-%D9%85%D8%AC%D9%87%D9%88%D9%84-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%A8%D9%88%D9%83%D9%85%D8%A7%D9%84.jpg",
+    image: "https://www.ncr-iran.org/en/wp-content/uploads/2022/07/iran-mashhad-yasser-camp.webp",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_21773425",
     contentEn: [],
     contentZh: [],
@@ -4239,7 +4238,6 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "December 11, 2022",
     dateZh: "2022年12月11日",
-    image: "https://www.nippon.com/hk/japan-topics/g00838/",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_21121692",
     contentEn: [],
     contentZh: [],
