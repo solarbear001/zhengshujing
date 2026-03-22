@@ -171,11 +171,23 @@ const About = () => {
 
             <div className="space-y-4 font-sans text-sm md:text-base text-muted-foreground leading-[1.8] tracking-wide max-w-2xl">
               {[
-                { en: "Shujing Zheng is a senior journalist/editor,fact checker at the World News Section of The Paper (澎湃新闻), specializing in combating online misinformation and disinformation with digital tools and advanced technologies. Well-experienced in social research, data analysis, AIGC exploration and media practice, and take great interest in job opportunities related to digital technology, data driven content production, AIGC, media operation or international communication.", zh: "郑淑婧是一名编辑和开源情报研究员，拥有国际传播和视觉叙事背景。她的工作位于调查新闻、数字媒体和创意策略的交汇处。" },
-                { en: "She is a heavy user of artificial intelligence, her key skills encompasses: ", zh: "她对数字体验、品牌塑造、创意策略和视觉识别感兴趣——探索信息如何塑造理解，设计如何传达真相。" },
-                { en: "— Strong multimedia skills in data collection and analysis. Proven ability to monitor social media accounts, verify information and write news reports. ", zh: "她对数字体验、品牌塑造、创意策略和视觉识别感兴趣——探索信息如何塑造理解，设计如何传达真相。" },
-                { en: "— Strong understanding of media landscape and news production. Delivered media literacy lectures at multiple universities including ZJU and SISU. ", zh: "她对数字体验、品牌塑造、创意策略和视觉识别感兴趣——探索信息如何塑造理解，设计如何传达真相。" },
-                { en: "— Proven teamwork skills. Had experience in attending, planning, organizing and hosting global conferences. ", zh: "她对数字体验、品牌塑造、创意策略和视觉识别感兴趣——探索信息如何塑造理解，设计如何传达真相。" },
+                {
+                  en: "Shujing Zheng is a senior journalist/editor,fact checker at the World News Section of The Paper (澎湃新闻), specializing in combating online misinformation and disinformation with digital tools and advanced technologies. Well-experienced in social research, data analysis, AIGC exploration and media practice, and take great interest in job opportunities related to digital technology, data driven content production, AIGC, media operation or international communication.",
+                  zh: "郑淑婧是《澎湃新闻》国际新闻中心的高级记者/编辑兼事实核查员，专长于运用数字工具和先进技术打击网络虚假信息和错误信息。她在社会调研、数据分析、AIGC探索及媒体实务方面经验丰富，并对与数字技术、数据驱动的内容制作、AIGC、媒体运营或国际传播相关领域抱有浓厚兴趣。",
+                },
+                { en: "Her key skills encompasses: ", zh: "她的核心技能包括：" },
+                {
+                  en: "— Strong multimedia skills in data collection and analysis. Heavy user of artificial intelligence. Proven ability to monitor social media accounts, verify information and write news reports. ",
+                  zh: "— 具备出色的多媒体数据采集与分析能力。人工智能重度使用者。在监控社交媒体账号、核实信息及撰写新闻报道方面能力突出。",
+                },
+                {
+                  en: "— Strong understanding of media landscape and news production. Delivered media literacy lectures at multiple universities including ZJU and SISU. ",
+                  zh: "— 对媒体生态及新闻制作有深刻理解。曾在浙江大学、上海外国语大学等多所高校讲授媒体素养课程。",
+                },
+                {
+                  en: "— Proven teamwork skills. Had experience in attending, planning, organizing and hosting global conferences. ",
+                  zh: "— 具备出色的团队协作能力。拥有参与、策划、组织及主持国际会议的经验。",
+                },
               ].map((item, i) => (
                 <ScrollReveal key={i} delay={i * 0.08}>
                   <p>{t(item.en, item.zh)}</p>
@@ -204,7 +216,10 @@ const About = () => {
                       { en: "AIGC", zh: "AIGC" },
                       { en: "CFA Level Ⅰ", zh: "CFA Level Ⅰ" },
                     ].map((skill, i) => (
-                      <li key={i} className="font-mono text-sm tracking-[0.1em] text-foreground/80 py-3 border-b border-border">
+                      <li
+                        key={i}
+                        className="font-mono text-sm tracking-[0.1em] text-foreground/80 py-3 border-b border-border"
+                      >
                         {t(skill.en, skill.zh)}
                       </li>
                     ))}
@@ -221,7 +236,10 @@ const About = () => {
                       { en: "Best International Communication Work ×3", zh: "最佳国际传播作品奖 ×3" },
                       { en: "March 8th Red Banner Collective", zh: "三八妇女红旗手优秀集体" },
                     ].map((award, i) => (
-                      <li key={i} className="font-mono text-sm tracking-[0.1em] text-foreground/80 py-3 border-b border-border">
+                      <li
+                        key={i}
+                        className="font-mono text-sm tracking-[0.1em] text-foreground/80 py-3 border-b border-border"
+                      >
                         {t(award.en, award.zh)}
                       </li>
                     ))}
@@ -238,7 +256,10 @@ const About = () => {
                       "Codrops Portfolio Case Study",
                       "Speaker at Awwwards",
                     ].map((item, i) => (
-                      <li key={i} className="font-mono text-sm tracking-[0.1em] text-foreground/80 py-3 border-b border-border">
+                      <li
+                        key={i}
+                        className="font-mono text-sm tracking-[0.1em] text-foreground/80 py-3 border-b border-border"
+                      >
                         {item}
                       </li>
                     ))}
