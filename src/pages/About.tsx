@@ -209,8 +209,8 @@ const About = () => {
                       { en: "OSINT Investigation", zh: "开源情报调查" },
                       { en: "International Communication", zh: "国际传播" },
                       { en: "Video Editing & Production", zh: "视频剪辑与制作" },
-                      { en: "Hosting / Event / Interview / Writing", zh: "主持 / 会务 / 采访 / 写作" },
-                      { en: "English Working Language", zh: "英语工作语言" },
+                      { en: "Hosting / Event Planning / Interview / Writing", zh: "主持 / 会务 / 采访 / 写作" },
+                      { en: "English as Working Language", zh: "英语工作语言" },
                       { en: "Social Media & Website Operations", zh: "社媒与网站运营" },
                       { en: "Media Literacy", zh: "媒介素养教育" },
                       { en: "AIGC", zh: "AIGC" },
@@ -231,10 +231,11 @@ const About = () => {
                 <CollapsibleSection letter="A" label={t("Awards", "荣誉")}>
                   <ul className="space-y-5">
                     {[
-                      { en: "Shanghai Journalism Award ×10", zh: "上海新闻奖 ×10" },
-                      { en: "Silver Pigeon Award ×2", zh: "银鸽奖 ×2" },
-                      { en: "Best International Communication Work ×3", zh: "最佳国际传播作品奖 ×3" },
-                      { en: "March 8th Red Banner Collective", zh: "三八妇女红旗手优秀集体" },
+                      { en: "Shanghai News Awards × 2", zh: "上海新闻奖 × 2" },
+                      { en: "The Silver Dove Award × 2", zh: "银鸽奖 × 3" },
+                      { en: "Excellent Online Rumor-Busting Works in Shanghai", zh:"2025年度上海网络辟谣优秀作品"}
+                      { en: "Shanghai March 8th Red Banner Collective", zh: "上海市三八红旗手（集体）" },
+                      { en: "Best International Communication Work of The Paper × 3", zh: "澎湃新闻年度最佳国际传播作品奖 ×3" },
                     ].map((award, i) => (
                       <li
                         key={i}
