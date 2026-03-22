@@ -2970,7 +2970,7 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "December 11, 2022",
     dateZh: "2022年12月11日",
-    image: "https://www.nippon.com/hk/japan-topics/g00838/",
+    image: "https://www.cdc.gov/covid/media/images/2024/11/GettyImages-1773970411_1200x675.png",
     contentEn: [],
     contentZh: [],
   },
