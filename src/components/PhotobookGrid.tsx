@@ -92,11 +92,6 @@ const PhotobookGrid = () => {
     });
   }, []);
 
-  const fillerCards = useMemo(() => {
-    const occupied = new Set<string>();
-    articlePositions.forEach(({ col, row }) => occupied.add(`${col}-${row}`));
-    return generateFillerCards(occupied);
-  }, [articlePositions]);
 
   const monthLabels = useMemo(() => {
     const labels: { col: number; label: string; isJan: boolean }[] = [];
