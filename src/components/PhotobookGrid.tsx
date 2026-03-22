@@ -47,59 +47,6 @@ const themes: { col: number; en: string; zh: string }[] = [
   { col: 210, en: "The Archive Continues", zh: "案延续" },
 ];
 
-// ============================================================
-// 🔗 FILLER CARD LINKS — Edit this array to set individual links
-// for each filler card image in the Work page grid.
-// Each entry maps an image to a URL (external or internal route).
-// To change images: replace the imported image files above (blogExt1, etc.)
-// To change links: edit the `link` value below for each image.
-// ============================================================
-const fillerImageLinks: Record<string, string> = {
-  [work1]: "https://www.thepaper.cn/newsDetail_forward_16942025",
-  [work2]: "https://m.thepaper.cn/newsDetail_forward_17829990",
-  [work3]: "https://www.thepaper.cn/newsDetail_forward_30721319",
-  [work4]: "https://www.thepaper.cn/newsDetail_forward_31880733",
-  [work5]: "https://www.thepaper.cn/newsDetail_forward_32523498",
-  [blogExt1]: "https://m.thepaper.cn/newsDetail_forward_22049169",
-  [blogExt2]: "https://m.thepaper.cn/newsDetail_forward_22049169",
-  [blog1]: "/blog/gemini-vs-chatgpt-video",
-};
-
-// Pre-generate filler cards for empty weeks
-function generateFillerCards(articleOccupied: Set<string>) {
-  const fillers: { col: number; row: number; image: string; link: string }[] = [];
-  const seededRandom = (seed: number) => {
-    const x = Math.sin(seed * 9301 + 49297) * 49297;
-    return x - Math.floor(x);
-  };
-
-  for (let weekStart = 0; weekStart < totalCols; weekStart += 7) {
-    const weekEnd = Math.min(weekStart + 7, totalCols);
-    const emptyCells: { col: number; row: number }[] = [];
-    for (let c = weekStart; c < weekEnd; c++) {
-      for (let r = 0; r < ROWS; r++) {
-        if (!articleOccupied.has(`${c}-${r}`)) {
-          emptyCells.push({ col: c, row: r });
-        }
-      }
-    }
-    if (emptyCells.length === 0) continue;
-    const count = seededRandom(weekStart) > 0.5 ? 2 : 1;
-    for (let i = 0; i < count && i < emptyCells.length; i++) {
-      const idx = Math.floor(seededRandom(weekStart * 7 + i + 1) * emptyCells.length);
-      const cell = emptyCells[idx];
-      emptyCells.splice(idx, 1);
-      const imgIdx = Math.floor(seededRandom(weekStart * 3 + i + 99) * fillerImages.length);
-      const image = fillerImages[imgIdx];
-      fillers.push({
-        ...cell,
-        image,
-        link: fillerImageLinks[image] || "https://unsplash.com/s/photos/documentary",
-      });
-    }
-  }
-  return fillers;
-}
 
 const PhotobookGrid = () => {
   const { t } = useLanguage();
