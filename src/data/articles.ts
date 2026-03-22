@@ -2873,7 +2873,7 @@ export const workArticles: Article[] = [
     dateEn: "February 3, 2023",
     dateZh: "2023年2月3日",
     image:
-      "https://npasyria.com/en/wp-content/uploads/2023/01/Airstrikes-attacking-convoy-of-Iranian-vehicles-near-Syrian-Iraqi-border-in-Deir-ez-Zor-eastern-Syria-750x430.jpeg",
+      "https://www.syriahr.com/en/wp-content/uploads/2023/01/%D9%82%D8%B5%D9%81-%D9%85%D8%AC%D9%87%D9%88%D9%84-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%A8%D9%88%D9%83%D9%85%D8%A7%D9%84.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_21773425",
     contentEn: [],
     contentZh: [],
@@ -5473,7 +5473,6 @@ export const workArticles: Article[] = [
     descZh: "",
     dateEn: "February 13, 2022",
     dateZh: "2022年2月13日",
-    image: "http://www.whwx.gov.cn/pydylm/202202/W020220207406851281430.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_16672179",
     contentEn: [],
     contentZh: [],
