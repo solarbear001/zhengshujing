@@ -5837,7 +5837,7 @@ export const blogArticles: Article[] = [
     letter: "M",
     category: "AI",
     titleEn: "Toolbox | Face Swap, Body Swap & Voice Swap — What Is 'Deepfake'?",
-    titleZh: "明查·工具箱｜一键换头、换身又换声？究竟什么是"深假"",
+    titleZh: "明查·工具箱｜一键换头、换身又换声？究竟什么是\u201C深假\u201D",
     descEn: "Understanding deepfake technology and its implications.",
     descZh: "了解深度伪造技术及其影响。",
     dateEn: "November 17, 2023",
