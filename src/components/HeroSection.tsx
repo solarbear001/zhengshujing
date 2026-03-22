@@ -20,7 +20,7 @@ const HeroSection = () => {
               <span className="font-mono text-[10px] tracking-[0.2em] text-foreground/30"> 2026</span>
             </div>
             <p className="font-mono text-xs tracking-[0.4em] text-foreground uppercase text-justify leading-relaxed">
-              writer&nbsp;&nbsp;editor&nbsp;&nbsp;researcher&nbsp;&nbsp;OSINTer
+              editor&nbsp;&nbsp;researcher&nbsp;&nbsp;OSINTer
             </p>
           </div>
 
