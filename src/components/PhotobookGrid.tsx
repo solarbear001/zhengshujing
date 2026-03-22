@@ -4,51 +4,6 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { useLanguage } from "@/contexts/LanguageContext";
 import { workArticles } from "@/data/articles";
 
-import work1 from "@/assets/work-1.jpg";
-import work2 from "@/assets/work-2.jpg";
-import work3 from "@/assets/work-3.jpg";
-import work4 from "@/assets/work-4.jpg";
-import work5 from "@/assets/work-5.jpg";
-import blogExt1 from "@/assets/blog-ext-1.jpg";
-import blogExt2 from "@/assets/blog-ext-2.jpg";
-import blogExt3 from "@/assets/blog-ext-3.jpg";
-import blogExt4 from "@/assets/blog-ext-4.jpg";
-import blogExt5 from "@/assets/blog-ext-5.jpg";
-import blogExt6 from "@/assets/blog-ext-6.jpg";
-import blogExt7 from "@/assets/blog-ext-7.jpg";
-import blogExt8 from "@/assets/blog-ext-8.jpg";
-import blogExt9 from "@/assets/blog-ext-9.jpg";
-import blogExt10 from "@/assets/blog-ext-10.jpg";
-import blog1 from "@/assets/blog-1.jpg";
-import blog2 from "@/assets/blog-2.jpg";
-import blog3 from "@/assets/blog-3.jpg";
-import blog4 from "@/assets/blog-4.jpg";
-import blog5 from "@/assets/blog-5.jpg";
-import blog6 from "@/assets/blog-6.jpg";
-
-const fillerImages = [
-  work1,
-  work2,
-  work3,
-  work4,
-  work5,
-  blogExt1,
-  blogExt2,
-  blogExt3,
-  blogExt4,
-  blogExt5,
-  blogExt6,
-  blogExt7,
-  blogExt8,
-  blogExt9,
-  blogExt10,
-  blog1,
-  blog2,
-  blog3,
-  blog4,
-  blog5,
-  blog6,
-];
 
 function parseDateFromArticle(dateEn: string): Date {
   const d = new Date(dateEn);
@@ -92,59 +47,6 @@ const themes: { col: number; en: string; zh: string }[] = [
   { col: 210, en: "The Archive Continues", zh: "案延续" },
 ];
 
-// ============================================================
-// 🔗 FILLER CARD LINKS — Edit this array to set individual links
-// for each filler card image in the Work page grid.
-// Each entry maps an image to a URL (external or internal route).
-// To change images: replace the imported image files above (blogExt1, etc.)
-// To change links: edit the `link` value below for each image.
-// ============================================================
-const fillerImageLinks: Record<string, string> = {
-  [work1]: "https://www.thepaper.cn/newsDetail_forward_16942025",
-  [work2]: "https://m.thepaper.cn/newsDetail_forward_17829990",
-  [work3]: "https://www.thepaper.cn/newsDetail_forward_30721319",
-  [work4]: "https://www.thepaper.cn/newsDetail_forward_31880733",
-  [work5]: "https://www.thepaper.cn/newsDetail_forward_32523498",
-  [blogExt1]: "https://m.thepaper.cn/newsDetail_forward_22049169",
-  [blogExt2]: "https://m.thepaper.cn/newsDetail_forward_22049169",
-  [blog1]: "/blog/gemini-vs-chatgpt-video",
-};
-
-// Pre-generate filler cards for empty weeks
-function generateFillerCards(articleOccupied: Set<string>) {
-  const fillers: { col: number; row: number; image: string; link: string }[] = [];
-  const seededRandom = (seed: number) => {
-    const x = Math.sin(seed * 9301 + 49297) * 49297;
-    return x - Math.floor(x);
-  };
-
-  for (let weekStart = 0; weekStart < totalCols; weekStart += 7) {
-    const weekEnd = Math.min(weekStart + 7, totalCols);
-    const emptyCells: { col: number; row: number }[] = [];
-    for (let c = weekStart; c < weekEnd; c++) {
-      for (let r = 0; r < ROWS; r++) {
-        if (!articleOccupied.has(`${c}-${r}`)) {
-          emptyCells.push({ col: c, row: r });
-        }
-      }
-    }
-    if (emptyCells.length === 0) continue;
-    const count = seededRandom(weekStart) > 0.5 ? 2 : 1;
-    for (let i = 0; i < count && i < emptyCells.length; i++) {
-      const idx = Math.floor(seededRandom(weekStart * 7 + i + 1) * emptyCells.length);
-      const cell = emptyCells[idx];
-      emptyCells.splice(idx, 1);
-      const imgIdx = Math.floor(seededRandom(weekStart * 3 + i + 99) * fillerImages.length);
-      const image = fillerImages[imgIdx];
-      fillers.push({
-        ...cell,
-        image,
-        link: fillerImageLinks[image] || "https://unsplash.com/s/photos/documentary",
-      });
-    }
-  }
-  return fillers;
-}
 
 const PhotobookGrid = () => {
   const { t } = useLanguage();
@@ -190,11 +92,6 @@ const PhotobookGrid = () => {
     });
   }, []);
 
-  const fillerCards = useMemo(() => {
-    const occupied = new Set<string>();
-    articlePositions.forEach(({ col, row }) => occupied.add(`${col}-${row}`));
-    return generateFillerCards(occupied);
-  }, [articlePositions]);
 
   const monthLabels = useMemo(() => {
     const labels: { col: number; label: string; isJan: boolean }[] = [];
@@ -363,32 +260,6 @@ const PhotobookGrid = () => {
               );
             })}
 
-            {/* Filler cards for empty weeks */}
-            {fillerCards.map((filler, i) => (
-              <a
-                key={`filler-${i}`}
-                href={filler.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute group cursor-pointer block"
-                style={{
-                  left: filler.col * cellW + GAP / 2,
-                  top: filler.row * cellH + GAP / 2,
-                  width: cellW - GAP,
-                  height: cellH - GAP,
-                }}
-              >
-                <div className="relative w-full h-full overflow-hidden">
-                  <img
-                    src={filler.image}
-                    alt=""
-                    className="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-              </a>
-            ))}
           </motion.div>
         </div>
       </div>
