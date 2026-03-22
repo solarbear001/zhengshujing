@@ -1988,7 +1988,7 @@ export const workArticles: Article[] = [
     dateEn: "March 12, 2024",
     dateZh: "2024年3月12日",
     image:
-      "https://www.resilience.org/wp-content/uploads/2023/09/CMOC_Treasures_of_Ancient_China_exhibit_-_bronze_battle_axe.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/CMOC_Treasures_of_Ancient_China_exhibit_-_bronze_battle_axe.jpg/500px-CMOC_Treasures_of_Ancient_China_exhibit_-_bronze_battle_axe.jpg",
     externalLink: "https://www.thepaper.cn/newsDetail_forward_26636815",
     contentEn: [],
     contentZh: [],
